@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddbooksComponent } from './addbooks/addbooks.component';
+import { FormsModule } from '@angular/forms';
+import { ViewbooksComponent } from './viewbooks/viewbooks.component';
+import { SearchbyPipe } from './searchby.pipe';
+import { EditbookComponent } from './editbook/editbook.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddbooksComponent,
+    ViewbooksComponent,
+    SearchbyPipe,
+    EditbookComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

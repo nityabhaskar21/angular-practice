@@ -1,0 +1,26 @@
+<section>
+  <div class="col-4 mx-auto text-center">
+    <input type="text" name="" [(ngModel)]="searchstr" id="filter" class="form-control"
+      placeholder="type here to search by title and author">
+  </div>
+
+  <table class="col-5 mx-auto table table-striped table-primary table table-hovered">
+    <tr class="bg-danger text-white">
+      <td (click)="sortId()">Book Id</td>
+      <td (click)="sortTitle()">Book Title</td>
+      <td (click)="sortPrice()">Price</td>
+      <td (click)="sortAuthor()">Author</td>
+      <td>Delete</td>
+      <td>Edit</td>
+
+    </tr>
+    <tr *ngFor="let b of book.bArr | searchby:searchstr">
+      <td>{{b.bookId}}</td>
+      <td>{{b.title | titlecase}}</td>
+      <td>{{b.price | currency:'INR'}}</td>
+      <td>{{b.author | uppercase}}</td>
+      <td><input type="button" value="delete" (click)="delete(b.bookId)" class=" btn btn-danger"></td>
+      <td><input type="button" value="edit" class=" btn btn-warning" routerLink="/edit/{{b.bookId}}"></td>
+    </tr>
+  </table>
+</section>

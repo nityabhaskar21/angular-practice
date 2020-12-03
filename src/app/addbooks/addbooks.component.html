@@ -1,0 +1,61 @@
+<!-- <section>
+  <h3 class="text-center">Add Book</h3>
+  <div class="alert alert-success"></div>
+  <form #frm="ngForm" (ngSubmit)="addBook()">
+    <table class="table col-4 table-striped table-danger table-hovered mx-auto">
+      <tr>
+        <td>Book Id: </td>
+        <td><input type="number" name="bid" [(ngModel)]="book.bookId" id="" required #bid="ngModel"></td>
+      </tr>
+      <tr>
+        <td>Book Title:</td>
+        <td><input type="text" name="" [(ngModel)]="book.title" id="" required #btitle="ngModel"></td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td><input type="number" name="" [(ngModel)]="book.price" id="" required #price="ngModel"></td>
+      </tr>
+      <tr>
+        <td>Author:</td>
+        <td><input type="text" name="" [(ngModel)]="book.author" id="" required #author="ngModel"></td>
+      </tr>
+
+      <tr>
+        <td><input type="submit" value="Add Book" [disabled]="!frm.valid"></td>
+      </tr>
+
+    </table>
+  </form>
+</section> -->
+
+<div class="col-4 mx-auto">
+  <h1>Add Book</h1>
+  <div class="alert alert-success">{{msg}}</div>
+  <form name="frm" #frm="ngForm" (ngSubmit)="addBook()">
+
+    <div>Book Id</div>
+    <div><input type="number" class="form-control" name="txteid" id="" [(ngModel)]="book.bookId" required
+        #eid="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="eid.invalid && eid.touched">Employeee Id is required</div>
+
+    <div>Title</div>
+    <div><input type="text" class="form-control" name="txtename" id="" [(ngModel)]="book.title" required
+        pattern="([a-zA-Z]+)|([a-zA-Z]+[ ][a-zA-Z]+)" #ename="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="ename.invalid && ename.touched">Employee Nmae must contain min 3 and max 15
+      alphabets</div>
+
+    <div>Price</div>
+    <div><input type="number" class="form-control" name="txtsal" id="" [(ngModel)]="book.price" required
+        #esal="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="esal.invalid && esal.touched">Salary is required</div>
+
+    <div>Author</div>
+    <div><input type="text" class="form-control" name="txtdept" id="" [(ngModel)]="book.author" required
+        pattern="([a-zA-Z]+)|([a-zA-Z]+[ ][a-zA-Z]+)" #edept="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="edept.invalid && edept.touched">Department must contain alphabets</div>
+
+    <div><input type="submit" [disabled]="!frm.valid" value="add Book"></div>
+  </form>
+</div>

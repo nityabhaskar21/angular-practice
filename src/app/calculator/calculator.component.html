@@ -1,0 +1,25 @@
+<section>
+  <h3 class="text-center">Calculator</h3>
+  <table class="table col-4 table-striped table-primary table-hovered mx-auto">
+    <tr>
+      <td>Amount</td>
+      <td><input type="number" [(ngModel)]="amt" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Years</td>
+      <td><input type="number" [(ngModel)]="years" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Rate</td>
+      <td><input type="number" [(ngModel)]="rate" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Result</td>
+      <td>{{res}}</td>
+    </tr>
+    <tr>
+      <td><input type="button" value="simple" (click)="calcSimple()"></td>
+      <td><input type="button" value="compound" (click)="calcCompound()"></td>
+    </tr>
+  </table>
+</section>

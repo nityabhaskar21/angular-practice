@@ -1,0 +1,21 @@
+<section>
+  <h3 class="text-center">Volume</h3>
+  <table class="table col-4 table-striped table-primary table-hovered mx-auto">
+    <tr>
+      <td>Radius:</td>
+      <td><input type="number" [(ngModel)]="radius" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Height:</td>
+      <td><input type="number" [(ngModel)]="height" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Volume:</td>
+      <td>{{volume}}</td>
+    </tr>
+    <tr>
+      <td><input type="button" value="cone" (click)="volCone()"></td>
+      <td><input type="button" value="cylinder" (click)="volCylinder()"></td>
+    </tr>
+  </table>
+</section>

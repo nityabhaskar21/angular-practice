@@ -1,0 +1,31 @@
+<div class="col-4 mx-auto">
+  <h1>Edit Employee</h1>
+  <div class="alert alert-success">{{msg}}</div>
+  <form name="frm" #frm="ngForm" (ngSubmit)="edit()">
+
+    <div>Employee Id</div>
+    <div><input type="number" readonly class="form-control" name="txteid" id="" [(ngModel)]="emp.empId" required
+        #eid="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="eid.invalid && eid.touched">Employeee Id is required</div>
+
+    <div>Employee Name</div>
+    <div><input type="text" class="form-control" name="txtename" id="" [(ngModel)]="emp.empName" required
+        pattern="([a-zA-Z]+)|([a-zA-Z]+[ ][a-zA-Z]+)" #ename="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="ename.invalid && ename.touched">Employee Nmae must contain min 3 and max 15
+      alphabets</div>
+
+    <div>Employee Salary</div>
+    <div><input type="number" class="form-control" name="txtsal" id="" [(ngModel)]="emp.empSal" required
+        #esal="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="esal.invalid && esal.touched">Salary is required</div>
+
+    <div>Department</div>
+    <div><input type="text" class="form-control" name="txtdept" id="" [(ngModel)]="emp.dept" required
+        pattern="[a-z]{2,15}" #edept="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="edept.invalid && edept.touched">Department must contain alphabets</div>
+
+    <div><input type="submit" [disabled]="!frm.valid" value="edit Employee"></div>
+  </form>
+</div>

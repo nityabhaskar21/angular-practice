@@ -1,0 +1,57 @@
+<!-- <section>
+  <h3 class="text-center">Add Emplloyee</h3>
+  <table class="table col-4 table-striped table-success table-hovered mx-auto">
+    <tr>
+      <td>Employee Id: </td>
+      <td><input type="number" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Employee Name:</td>
+      <td><input type="text" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Salary:</td>
+      <td><input type="number" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Dept:</td>
+      <td><input type="text" name="" id=""></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" value="Add Employee"></td>
+
+    </tr>
+
+  </table>
+</section> -->
+<div class="col-4 mx-auto">
+  <h1>Add Employee</h1>
+  <div class="alert alert-success">{{msg}}</div>
+  <form name="frm" #frm="ngForm" (ngSubmit)="add()">
+
+    <div>Employee Id</div>
+    <div><input type="number" class="form-control" name="txteid" id="" [(ngModel)]="emp.empId" required #eid="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="eid.invalid && eid.touched">Employeee Id is required</div>
+
+    <div>Employee Name</div>
+    <div><input type="text" class="form-control" name="txtename" id="" [(ngModel)]="emp.empName" required
+        pattern="[a-zA-Z]{3,15}" #ename="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="ename.invalid && ename.touched">Employee Nmae must contain min 3 and max 15
+      alphabets</div>
+
+    <div>Employee Salary</div>
+    <div><input type="number" class="form-control" name="txtsal" id="" [(ngModel)]="emp.empSal" required
+        #esal="ngModel"></div>
+    <div class="alert alert-danger" *ngIf="esal.invalid && esal.touched">Salary is required</div>
+
+    <div>Department</div>
+    <div><input type="text" class="form-control" name="txtdept" id="" [(ngModel)]="emp.dept" required pattern="[a-z]+"
+        #edept="ngModel">
+    </div>
+    <div class="alert alert-danger" *ngIf="edept.invalid && edept.touched">Department must contain alphabets</div>
+
+    <div><input type="submit" [disabled]="!frm.valid" value="add Employee"></div>
+  </form>
+</div>

@@ -1,0 +1,27 @@
+<section>
+  <h2 class="text-center">View Employee</h2>
+  <div class="col-4 mx-auto"><input type="text" placeholder="type employee name to search for ..." name=""
+      class="form-control" [(ngModel)]="searchstr" id=""></div>
+  <table class="col-5 mx-auto table table-striped table-primary table table-hovered">
+    <tr class="bg-danger text-white">
+      <td><a (click)="setField('empId')">Emp Id</a> </td>
+      <td><a (click)="setField('empName')">EmpName</a></td>
+      <td><a (click)="setField('empSal')">Salary</a></td>
+      <td><a (click)="setField('dept')">Dept</a></td>
+      <td><a (click)="setField('empSal')">PF</a></td>
+      <td><a (click)="setField('empSal')">Net Salary</a></td>
+      <td>Remove</td>
+      <td>Edit</td>
+    </tr>
+    <tr *ngFor="let e of empService.emps | searchby:searchstr | orderby:fname">
+      <td>{{e.empId}}</td>
+      <td>{{e.empName | titlecase}}</td>
+      <td>{{e.empSal | currency:'INR'}}</td>
+      <td>{{e.dept | uppercase}}</td>
+      <td>{{e.empSal | pf | currency:'INR'}}</td>
+      <td>{{(e.empSal - (e.empSal | pf)) | currency:'INR'}}</td>
+      <td><input type="button" value="remove" (click)="remove(e.empId)" class="btn btn-danger"></td>
+      <td><input type="button" routerLink="/edit/{{e.empId}}" value="edit" class="btn btn-warning"></td>
+    </tr>
+  </table>
+</section>

@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  str:string;
+  str: string;
+  style1 = { width: '200px', height: '200px' };
+  imgname: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  setImage(strimage: string) {
+    this.imgname = strimage;
   }
-
 }

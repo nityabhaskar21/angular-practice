@@ -1,7 +1,5 @@
 <section class="col-5 mx-auto m-2 bg-warning" [ngStyle]="style1">
-  <h2>Child </h2>
+  <h2>Parent 2</h2>
   <div appHighlight>{{strname}}</div>
-  <div>
-    <img [src]="strimage" alt="" height="150" width="150">
-  </div>
 </section>
+<app-child2 (notify)="captureEvent($event)"></app-child2>

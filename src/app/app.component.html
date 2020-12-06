@@ -1,0 +1,21 @@
+<header class="jumbotron">
+  <h1 class="text-center text-primary">Hi , Welcome to Sify-Guard</h1>
+  <div class="col-10 text-right" *ngIf="!loginflag"><a routerLink="/login">Login</a></div>
+  <div class="col-10 text-right" *ngIf="loginflag"><a (click)="doLogout()">Logout</a></div>
+</header>
+
+<!-- <article class="row">
+  <app-calculator></app-calculator>
+  <app-volume></app-volume>
+  <app-food></app-food>
+  <app-tax></app-tax>
+</article> -->
+
+<nav class="row bg-dark mx-auto ">
+  <a class="m-2 p-2 text-white" routerLink="/calc">Calculator</a>
+  <a class="m-2 p-2 text-white" routerLink="/volume">Volume</a>
+  <a class="m-2 p-2 text-white" routerLink="/tax">Tax</a>
+  <a class="m-2 p-2 text-white" routerLink="/food">Food Bill</a>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+<section>
+  <h3 class="text-center">Tax Calculation</h3>
+  <table class="table col-4 table-striped table-success table-hovered mx-auto">
+    <tr>
+      <td>Employee Name:</td>
+      <td><input type="text" [(ngModel)]="name" name="" id="" /></td>
+    </tr>
+    <tr>
+      <td>Annual Income:</td>
+      <td><input type="number" [(ngModel)]="income" name="" id="" /></td>
+    </tr>
+    <tr>
+      <td>Tax:</td>
+      <td>{{ tax }}</td>
+    </tr>
+    <tr>
+      <td class="text-center">
+        <input type="button" value="Calc Tax" (click)="calcTax()" />
+      </td>
+    </tr>
+  </table>
+</section>

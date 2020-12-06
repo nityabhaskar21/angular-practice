@@ -1,0 +1,21 @@
+<section class="col-4 mx-auto">
+  <div class="alert alert-danger">
+    You Are not authorised to access
+  </div>
+  <h2 class="text-center">Login</h2>
+  <div class="alert alert-warning" *ngIf="msg != undefined">{{msg}}</div>
+
+  <form #frm="ngForm" (ngSubmit)="doLogin()">
+    <div>User Name</div>
+    <div><input type="text" name="txtname" [(ngModel)]="uname" #loginuid="ngModel" required id="" class="form-control">
+    </div>
+    <div class="alert alert-danger" *ngIf="loginuid.invalid && loginuid.touched"> UserName is required</div>
+
+    <div>Password</div>
+    <div><input type="password" name="txtpwd" [(ngModel)]="pwd" #loginpwd="ngModel" required id="" class="form-control">
+    </div>
+    <div class="alert alert-danger" *ngIf="loginpwd.invalid && loginpwd.touched"> Password is required</div>
+
+    <div><input type="submit" value="login" [disabled]="!frm.valid"></div>
+  </form>
+</section>

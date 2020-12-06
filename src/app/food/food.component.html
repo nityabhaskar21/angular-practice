@@ -1,0 +1,30 @@
+<section>
+  <h3 class="text-center">Shared Food Bill</h3>
+  <table class="table col-4 table-striped table-success table-hovered mx-auto">
+    <tr>
+      <td>Total Bill Cost:</td>
+      <td><input type="number" [(ngModel)]="totalBill" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Tip Percentage:</td>
+      <td><input type="number" [(ngModel)]="tipPrecentage" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>No. of Person:</td>
+      <td><input type="number" [(ngModel)]="noOfPerson" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Tip per Person:</td>
+      <td>{{tipPerPerson}}</td> 
+    </tr>
+    <tr>
+      <td>Total per Person:</td>
+      <td>{{totalPerPerson}}</td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Calc Bill" (click)="calcBill()"></td>
+
+    </tr>
+
+  </table>
+</section>

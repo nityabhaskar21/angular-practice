@@ -1,0 +1,17 @@
+<section>
+  <h1 class="text-center">Book List</h1>
+  <table class="col-5 mx-auto table table-striped table-warning table-hover">
+    <tr>
+      <td>Book Id</td>
+      <td>Name</td>
+      <td>Cost</td>
+      <td>Author</td>
+    </tr>
+    <tr *ngFor="let b of books">
+      <td>{{b.id}}</td>
+      <td>{{b.title}}</td>
+      <td>{{b.cost}}</td>
+      <td>{{b.author}}</td>
+    </tr>
+  </table>
+</section>

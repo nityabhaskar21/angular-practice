@@ -1,0 +1,36 @@
+[{
+    "pid": 1001,
+    "pname": "acer",
+    "price": 32000,
+    "cat": "computer",
+    "imgurl": "../assets/images/aceraspire.jpg"
+  },
+  {
+    "pid": 1002,
+    "pname": "samsung glaxy",
+    "price": 12000,
+    "cat": "mobile",
+    "imgurl": "../assets/images/samsung.jpg"
+  },
+  {
+    "pid": 1003,
+    "pname": "Head Phone",
+    "price": 2000,
+    "cat": "jbl",
+    "imgurl": "../assets/images/headphone.jpg"
+  },
+  {
+    "pid": 1004,
+    "pname": "bottel",
+    "price": 200,
+    "cat": "cello",
+    "imgurl": "../assets/images/bottle.jpg"
+  },
+  {
+    "pid": 1005,
+    "pname": "School Bag",
+    "price": 4000,
+    "cat": "Skybags",
+    "imgurl": "../assets/images/schoolbag.jpg"
+  }
+]

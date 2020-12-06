@@ -1,0 +1,16 @@
+<h1 class="text-center">Employee info</h1>
+<article class="row col-10 mx-auto">
+
+  <section>
+    <div class="row" *ngFor="let e of emps">
+      <div class="p-2 border rounded-left bg-primary">
+        <a routerLink="/emps/empdetails/{{e.eid}}" class="text-white">{{e.eid}}</a>
+      </div>
+      <div class="p-2 border bg-info w-50">{{e.ename}}</div>
+    </div>
+  </section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+
+</article>

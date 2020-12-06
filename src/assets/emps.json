@@ -1,0 +1,31 @@
+[
+    {
+        "eid": 1001,
+        "ename": "ram kumar",
+        "salary": 32000,
+        "dept": "human resource",
+        "imgurl": "../assets/images/1001.jpg"
+    },
+    {
+        "eid": 1003,
+        "ename": "vikram singh",
+        "salary": 42000,
+        "dept": "production",
+        "imgurl": "../assets/images/1002.jpg"
+    },
+    {
+        "eid": 2001,
+        "ename": "bala kumar",
+        "salary": 55000,
+        "dept": "human resource",
+        "imgurl": "../assets/images/2001.jpg"
+    },
+    {
+        "eid": 2002,
+        "ename": "saurav singh",
+        "salary": 44000,
+        "dept": "production",
+        "imgurl": "../assets/images/2002.jpg"
+    }
+
+]

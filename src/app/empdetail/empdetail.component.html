@@ -1,0 +1,21 @@
+<section>
+  <img src="{{emps.imgurl}}" height="200" width="200" alt="">
+  <table class="table table-success table-striped table-hover">
+    <tr>
+      <td>Employee id</td>
+      <td>{{emps.eid}}</td>
+    </tr>
+    <tr>
+      <td>Employee name</td>
+      <td>{{emps.ename | titlecase}}</td>
+    </tr>
+    <tr>
+      <td>Employee Salary</td>
+      <td>{{emps.salary | currency:'INR'}}</td>
+    </tr>
+    <tr>
+      <td>Employee Department</td>
+      <td>{{emps.dept}}</td>
+    </tr>
+  </table>
+</section>

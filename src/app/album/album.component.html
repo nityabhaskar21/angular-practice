@@ -1,0 +1,24 @@
+<section class="col-5 mx-auto">
+  <h1 class="text-center">View Album</h1>
+  <div>album id</div>
+  <div><input type="text" [(ngModel)]="albumId"></div>
+  <div><input type="button" value="search" (click)="viewAlbum()"></div>
+  <hr>
+  <div *ngIf="msg != undefined" class="alert alert-danger">{{msg}}</div>
+  <table class=" mx-auto table table-striped table-primary table-hover" *ngIf="msg == undefined">
+    <tr>
+      <td>Album ID</td>
+      <td>{{album.id}}</td>
+    </tr>
+    <tr>
+      <td>album title</td>
+      <td>{{album.title }}</td>
+    </tr>
+    <tr>
+      <img src={{album.url}} alt="" height="200px" width="200px">
+    </tr>
+
+
+
+  </table>
+</section>

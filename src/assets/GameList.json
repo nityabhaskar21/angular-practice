@@ -1,0 +1,26 @@
+[{
+    "gameId": 1001,
+    "gameName": "Shooting",
+    "gamePrice": 105
+  },
+  {
+    "gameId": 1002,
+    "gameName": "Angry Bird",
+    "gamePrice": 95
+  },
+  {
+    "gameId": 1003,
+    "gameName": "Temple Run",
+    "gamePrice": 200
+  },
+  {
+    "gameId": 1004,
+    "gameName": "Bike Race",
+    "gamePrice": 90
+  },
+  {
+    "gameId": 1004,
+    "gameName": "Air Controle",
+    "gamePrice": 800
+  }
+]

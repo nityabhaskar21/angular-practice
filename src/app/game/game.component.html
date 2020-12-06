@@ -1,0 +1,19 @@
+<section class="col-5 mx-auto">
+  <h1 class="text-center">View Games</h1>
+
+  <hr>
+  <div *ngIf="msg != undefined" class="alert alert-danger">{{msg}}</div>
+  <table class=" mx-auto table table-striped table-primary table-hover" *ngIf="msg == undefined">
+    <tr>
+      <td>Game Id</td>
+      <td>Name</td>
+      <td>Price</td>
+    </tr>
+    <tr *ngFor="let g of game">
+      <td>{{g.gameId}}</td>
+      <td>{{g.gameName}}</td>
+      <td>{{g.gamePrice | currency:'INR'}}</td>
+    </tr>
+
+  </table>
+</section>
